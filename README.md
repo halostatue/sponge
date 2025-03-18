@@ -140,6 +140,6 @@ to disable the built in filters:
 [fish]: https://github.com/fish-shell/fish-shell
 [fisher]: https://github.com/jorgebucaran/fisher
 [releases]: https://github.com/halostatue/sponge/releases/latest
-[version]: https://img.shields.io/github/release/halostatue/sponge.svg?label=Version
+[version]: https://img.shields.io/github/v/release/halostatue/sponge.svg?label=Version
 [failed]: https://github.com/halostatue/sponge/blob/main/functions/sponge_filter_failed.fish
 [matched]: https://github.com/halostatue/sponge/blob/main/functions/sponge_filter_matched.fish
