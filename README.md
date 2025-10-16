@@ -1,7 +1,5 @@
 # Sponge
 
-[![Releases][version]][releases]
-
 > Don't you hate it when you spend half an hour searching for a command, finally
 > find it and happily press `Enter` only to realize a couple of seconds later...
 > it's not that one, it's another one you've entered two months ago, the one
@@ -139,7 +137,5 @@ to disable the built in filters:
 
 [fish]: https://github.com/fish-shell/fish-shell
 [fisher]: https://github.com/jorgebucaran/fisher
-[releases]: https://github.com/halostatue/sponge/releases/latest
-[version]: https://img.shields.io/github/v/release/halostatue/sponge.svg?label=Version
 [failed]: https://github.com/halostatue/sponge/blob/main/functions/sponge_filter_failed.fish
 [matched]: https://github.com/halostatue/sponge/blob/main/functions/sponge_filter_matched.fish
