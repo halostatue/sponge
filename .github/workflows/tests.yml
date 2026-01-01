@@ -8,6 +8,10 @@ on:
 
 permissions: {}
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check-fish:
     name: Check Fish
@@ -18,7 +22,7 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
+        uses: step-security/harden-runner@20cf305ff2072d973412fa9b1e3a4f227bda3c76 # v2.14.0
         with:
           egress-policy: block
           allowed-endpoints: >
@@ -32,15 +36,15 @@ jobs:
             raw.githubusercontent.com:443
             registry.npmjs.org:443
 
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
 
-      - uses: fish-shop/install-fish-shell@941364949064c069604fabe72d45676195a864ff # v2.0.21
-      - uses: fish-shop/indent-check@dcd53af634cb1c79b46a07962391598025bdc289 # v2.2.67
-      - uses: fish-shop/syntax-check@60258f8a2bcf6f4ab8fc42795a95397c7c92ea54 # v2.2.66
-      - uses: fish-shop/install-plugin@79e31a093fc8e85718ef3f0cc7673d31b48b1cef # v2.3.69
+      - uses: fish-shop/install-fish-shell@b9f7419082b5244e811eb0b7469d4fada87b8f64 # v2.0.38
+      - uses: fish-shop/indent-check@a72c2afc9bf5df6edd9d1606f00f5ae77c106b08 # v2.2.84
+      - uses: fish-shop/syntax-check@ab163b4b0dbf0882c3b4a29141365bb539393968 # v2.2.83
+      - uses: fish-shop/install-plugin@e33eadebca83e95556716d925596af841d531be7 # v2.3.86
         with:
           plugin-manager: fisher
           plugins: IlanCosman/clownfish
-      - uses: fish-shop/run-fishtape-tests@2e6d18565a5b5e1638d1625dcf4bf722d806660c # v2.3.69
+      - uses: fish-shop/run-fishtape-tests@2037d047c8f426ad78d7dd427b7a818054ccdb2c # v2.3.86
