@@ -1,5 +1,8 @@
 # Sponge
 
+[![Version](https://img.shields.io/github/tag/halostatue/sponge.svg?label=Version)][releases]
+[![MIT](https://img.shields.io/badge/licence-MIT-blue?style=for-the-badge "MIT")](https://github.com/halostatue/sponge/blob/main/LICENCE.md)
+
 > Don't you hate it when you spend half an hour searching for a command, finally
 > find it and happily press `Enter` only to realize a couple of seconds later...
 > it's not that one, it's another one you've entered two months ago, the one
@@ -11,6 +14,10 @@
 Sponge quietly runs in the background and keeps your shell history clean from
 typos, incorrectly used commands and everything you don't want to store due to
 privacy reasons.
+
+> NOTE: This does not work when using replacement history managers like
+> [atuin][atuin] or [mcfly][mcfly]. As I use Atuin, this project has been
+> archived.
 
 ## Installation
 
@@ -139,3 +146,6 @@ to disable the built in filters:
 [fisher]: https://github.com/jorgebucaran/fisher
 [failed]: https://github.com/halostatue/sponge/blob/main/functions/sponge_filter_failed.fish
 [matched]: https://github.com/halostatue/sponge/blob/main/functions/sponge_filter_matched.fish
+[releases]: https://github.com/halostatue/fish-brew/releases
+[atuin]: https://atuin.sh
+[mcfly]: https://github.com/cantino/mcfly
